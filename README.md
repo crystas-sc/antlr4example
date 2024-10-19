@@ -7,7 +7,7 @@ This project aims to develop a robust system that converts plain text expression
 - Text Parsing: Efficiently parse and interpret plain text expressions.
 JSONLogic Conversion: Transform parsed expressions into JSONLogic format.
 - Evaluation Engine: Execute the JSONLogic to derive results based on the given expressions - https://jsonlogic.com/play.html
-- Extensibility: Support for a wide range of logical operations and custom extensions.
+- Extensibility: Support for a wide range of logical operations and functions.
 
 ## Use Cases:
 
