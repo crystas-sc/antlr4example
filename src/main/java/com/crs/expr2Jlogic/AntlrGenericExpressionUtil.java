@@ -56,6 +56,11 @@ public class AntlrGenericExpressionUtil {
             return jsonNode;
         }
 
+        if(node instanceof ExpressionParser.NotExpressionContext){
+            arr.add(visitForJSONLogic(node.getChild(1)));
+            jsonNode.set(node.getChild(0).getText(), arr);
+        }
+
         if ((node instanceof ExpressionParser.ExprContext)
                 || node instanceof ExpressionParser.ToComparisonContext
                 || node instanceof ExpressionParser.ToFunctionCallContext
