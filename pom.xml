@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.khubla.antlr4example</groupId>
-	<artifactId>antlr4example</artifactId>
+	<groupId>com.crs.expr2Jlogic</groupId>
+	<artifactId>expr2Jlogic</artifactId>
 	<packaging>jar</packaging>
-	<name>khubla.com Antlr4 Example</name>
+	<name>Exprssion to JSON Logic</name>
 	<version>1.0-SNAPSHOT</version>
 	<properties>
 		<antlr.version>4.13.2</antlr.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<target.jvm>21</target.jvm>
+		<target.jvm>11</target.jvm>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -16,10 +16,17 @@
 			<artifactId>antlr4-runtime</artifactId>
 			<version>${antlr.version}</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.18.0</version>
+</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
-			<plugin>
+			<!-- <plugin>
 				<groupId>com.googlecode.maven-download-plugin</groupId>
 				<artifactId>download-maven-plugin</artifactId>
 				<version>1.10.0</version>
@@ -36,7 +43,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 			<plugin>
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr4-maven-plugin</artifactId>
@@ -53,7 +60,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
 				<version>3.6.0</version>
@@ -72,7 +79,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
